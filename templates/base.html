@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>App - By Roberto</title>
+
+        <style>
+
+            * {
+                margin: 0;
+                box-sizing: border-box;
+                font-family: monospace;
+            }
+
+            #main {
+                position: absolute;
+                width: 100vw;
+                height: 100vh;
+            }
+
+            h1 {
+                position: absolute;
+                font-size: 18px;
+                text-align: center;
+                width: 100%;
+            }
+
+            .menu-mobile{
+                position: absolute;
+                width: 100vw;
+                height: 80px;
+                padding: 5px;
+                background-color: red;
+            }
+
+            .menu-mobile > div {
+                position: absolute;
+                height: calc(100% - 10px);
+                background-color: white;
+                width: calc(50% - 10px);
+                border-radius: 10px;
+                border-top: solid 10px lightgray;
+                text-align: center;
+                font-size: large;
+                box-shadow: 0 0 10px black;
+                transition: 0.4s;
+                user-select: none;
+            }
+
+            .menu-mobile > div:active {
+                scale: 0.90;
+                background: rgba(100, 100, 100, 0.62);
+                border-color: green;
+            }
+
+            .menu-mobile > .menu-opcao-1 {
+                left: 5px;
+                padding-top: 20px;
+            }
+
+            .menu-mobile > .menu-opcao-2 {
+                right: 5px;
+                padding-top: 10px;
+            }
+
+            .conteudo-mobile {
+                position: absolute;
+                width: 100vw;
+                height: calc(100% - 80px);
+                bottom: 0;
+                background-color: rgba(100, 100, 100, 0.62);
+                text-align: center;
+                overflow-y: scroll;
+            }
+
+            .conteudo-mobile > .solicitar {
+                position: absolute;
+                padding: 30px;
+            }
+
+            .solicitar > input, select {
+                position: relative;
+                width: calc(100vw - 60px);
+                font-size: 25px;
+                padding: 10px;
+                text-align: center;
+                margin: 10px 0;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="main">
+            {% block conteudo %}{% endblock %}
+        </div>
+
+        <script>
+
+            const screen_w = screen.availWidth;
+            const screen_h = screen.availHeight;
+
+        </script>
+
+    </body>
+
+</html>

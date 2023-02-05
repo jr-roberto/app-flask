@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+    <!-- Validando plataforma -->
+    {% if 'Android' in platform %}
+
+        <!-- Ambiente Mobile -->
+        <div class="menu-mobile">
+
+            <div class="menu-opcao-1">Solicitar</div>
+            <div class="menu-opcao-2">Verificar<p>Solicitacoes</p></div>
+            
+        </div>
+
+        <div class="conteudo-mobile">
+
+            <form method="post" class="solicitar">
+
+                <input type="number" name="" id="">
+                <select name="tipo" id="">
+
+                    <option value="#"></option>
+                    <option value="Varrido">Varrido</option>
+                    <option value="dica">Dica Localizacao</option>
+
+                </select>
+
+            </form>
+
+        </div>
+
+    {% else %}
+        <!-- Ambiente Web -->
+        <h1>Dispositivo - WEB Detactado</h1>
+        
+
+
+    {% endif %}
+
+{% endblock %}
